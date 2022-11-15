@@ -14,8 +14,8 @@ class MainController extends Controller
         curl_setopt_array($ch = curl_init(), array(
             CURLOPT_URL => "https://api.pushover.net/1/messages.json",
             CURLOPT_POSTFIELDS => array(
-              "token" => "asddrpoooz83svou9gmwn535e4ay5b",
-              "user" => "ufz1ezdvthiutjh1hnhcaxuzm4k3ko",
+              "token" => "",
+              "user" => "",
               "message" => $message,
             ),
             CURLOPT_SAFE_UPLOAD => true,
